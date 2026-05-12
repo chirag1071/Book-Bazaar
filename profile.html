@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - Book Bazaar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">Book Bazaar</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#books">Books</a></li>
+                    <li><a href="profile.html" class="active">Profile</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+                        <span class="theme-icon">🌙</span>
+                    </button>
+                    <div class="profile-dropdown">
+                        <button class="profile-btn" id="profileBtn">
+                            <span class="profile-icon">👤</span>
+                            <span class="profile-name">Guest</span>
+                            <span class="dropdown-arrow">▼</span>
+                        </button>
+                        <div class="dropdown-menu" id="dropdownMenu">
+                            <a href="profile.html" class="dropdown-item">
+                                <span>👤</span> My Profile
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                <span>📚</span> My Books
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                <span>❤️</span> Wishlist
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                <span>📦</span> Orders
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                <span>⚙️</span> Settings
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" class="dropdown-item logout">
+                                <span>🚪</span> Logout
+                            </a>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <span class="cart-icon">🛒</span>
+                        <span class="cart-count">0</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="profile-section">
+        <div class="container">
+            <div class="profile-container">
+                <aside class="profile-sidebar">
+                    <div class="profile-card">
+                        <div class="profile-avatar">👤</div>
+                        <h3>Guest User</h3>
+                        <p class="profile-email">guest@bookbazaar.com</p>
+                        <button class="btn-edit">Edit Profile</button>
+                    </div>
+                    <nav class="profile-nav">
+                        <a href="#" class="profile-nav-item active">
+                            <span>👤</span> Profile Info
+                        </a>
+                        <a href="#" class="profile-nav-item">
+                            <span>📦</span> My Orders
+                        </a>
+                        <a href="#" class="profile-nav-item">
+                            <span>❤️</span> Wishlist
+                        </a>
+                        <a href="#" class="profile-nav-item">
+                            <span>📚</span> My Library
+                        </a>
+                        <a href="#" class="profile-nav-item">
+                            <span>⚙️</span> Settings
+                        </a>
+                    </nav>
+                </aside>
+
+                <main class="profile-main">
+                    <div class="profile-header">
+                        <h2>Profile Information</h2>
+                    </div>
+
+                    <div class="profile-content">
+                        <div class="info-section">
+                            <h3>Personal Details</h3>
+                            <div class="info-grid">
+                                <div class="info-item">
+                                    <label>Full Name</label>
+                                    <p>Guest User</p>
+                                </div>
+                                <div class="info-item">
+                                    <label>Email</label>
+                                    <p>guest@bookbazaar.com</p>
+                                </div>
+                                <div class="info-item">
+                                    <label>Phone</label>
+                                    <p>+91 98765 43210</p>
+                                </div>
+                                <div class="info-item">
+                                    <label>Member Since</label>
+                                    <p>January 2024</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="info-section">
+                            <h3>Shipping Address</h3>
+                            <div class="address-card">
+                                <p><strong>Home</strong></p>
+                                <p>123 Book Street</p>
+                                <p>Reading City, RC 12345</p>
+                                <p>India</p>
+                            </div>
+                        </div>
+
+                        <div class="info-section">
+                            <h3>Recent Orders</h3>
+                            <div class="orders-list">
+                                <div class="order-item">
+                                    <div class="order-info">
+                                        <h4>Order #12345</h4>
+                                        <p>2 items • $49.98</p>
+                                        <span class="order-status delivered">Delivered</span>
+                                    </div>
+                                    <p class="order-date">Jan 15, 2024</p>
+                                </div>
+                                <div class="order-item">
+                                    <div class="order-info">
+                                        <h4>Order #12344</h4>
+                                        <p>1 item • $24.99</p>
+                                        <span class="order-status shipping">Shipping</span>
+                                    </div>
+                                    <p class="order-date">Jan 10, 2024</p>
+                                </div>
+                                <div class="order-item">
+                                    <div class="order-info">
+                                        <h4>Order #12343</h4>
+                                        <p>3 items • $71.97</p>
+                                        <span class="order-status delivered">Delivered</span>
+                                    </div>
+                                    <p class="order-date">Jan 5, 2024</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="info-section">
+                            <h3>Reading Stats</h3>
+                            <div class="stats-grid">
+                                <div class="stat-card">
+                                    <div class="stat-icon">📚</div>
+                                    <div class="stat-info">
+                                        <h4>24</h4>
+                                        <p>Books Purchased</p>
+                                    </div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-icon">❤️</div>
+                                    <div class="stat-info">
+                                        <h4>12</h4>
+                                        <p>Wishlist Items</p>
+                                    </div>
+                                </div>
+                                <div class="stat-card">
+                                    <div class="stat-icon">⭐</div>
+                                    <div class="stat-info">
+                                        <h4>8</h4>
+                                        <p>Reviews Written</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Book Bazaar. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
