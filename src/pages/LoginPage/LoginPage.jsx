@@ -38,6 +38,7 @@ function LoginPage({ onLogin }) {
         setError(data.message || 'Login failed. Please try again.');
       }
     } catch (err) {
+      console.error(err);
       setError('Unable to connect to server. Please try again.');
     } finally {
       setLoading(false);

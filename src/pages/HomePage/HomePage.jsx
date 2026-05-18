@@ -6,7 +6,6 @@ import './HomePage.css';
 
 function HomePage({ onAddToCart, wishlist, toggleWishlist }) {
   const [books, setBooks] = useState([]);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchBooks = async () => {
@@ -15,8 +14,6 @@ function HomePage({ onAddToCart, wishlist, toggleWishlist }) {
         setBooks(data.books || []);
       } catch (err) {
         console.error("Failed to fetch featured books", err);
-      } finally {
-        setLoading(false);
       }
     };
     fetchBooks();
@@ -107,7 +104,7 @@ function HomePage({ onAddToCart, wishlist, toggleWishlist }) {
       <section className="features-strip">
         <div className="container">
           <div className="features-grid">
-            {features.map((f, i) => (
+            {features.map((f) => (
               <Link to={f.link} className="feature-item" key={f.title}>
                 <span className="feature-icon">{f.icon}</span>
                 <div>
@@ -148,7 +145,7 @@ function HomePage({ onAddToCart, wishlist, toggleWishlist }) {
             <div className="accent-line"></div>
           </div>
           <div className="categories-grid">
-            {dynamicCategories.map((cat, i) => (
+            {dynamicCategories.map((cat) => (
               <Link to={`/books?category=${cat.name.toLowerCase()}`} className="category-card" key={cat.name} style={{'--cat-color': cat.color}}>
                 <span className="cat-icon">{cat.icon}</span>
                 <h3>{cat.name}</h3>
@@ -176,7 +173,7 @@ function HomePage({ onAddToCart, wishlist, toggleWishlist }) {
               { name: 'Priya Sharma', text: 'Book Bazaar has completely transformed my reading habits. The collection is amazing!', avatar: '👩' },
               { name: 'Rahul Kumar', text: 'Fast delivery and excellent book recommendations. My go-to bookstore now!', avatar: '👨' },
               { name: 'Anita Patel', text: 'Love the UI and the variety. Found so many hidden gems I would have never discovered!', avatar: '👩‍🦱' },
-            ].map((t, i) => (
+            ].map((t) => (
               <div className="testimonial-card" key={t.name}>
                 <div className="testimonial-stars">★★★★★</div>
                 <p className="testimonial-text">"{t.text}"</p>

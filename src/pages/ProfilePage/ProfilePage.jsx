@@ -58,7 +58,7 @@ function ProfilePage({ user: authUser, wishlist = [], toggleWishlist }) {
         data.append('image', selectedFile);
       }
 
-      const res = await api.put('/api/v1/user/updateprofile', data, true);
+      await api.put('/api/v1/user/updateprofile', data, true);
       
       // Re-fetch profile to get new image URL
       const updatedProfile = await api.get('/api/v1/user/profile');

@@ -53,6 +53,12 @@ function App() {
     localStorage.setItem('bookbazaar_wishlist', JSON.stringify(wishlist));
   }, [wishlist]);
 
+  const handleLogout = () => {
+    setUser(null);
+    localStorage.removeItem('bookbazaar_token');
+    localStorage.removeItem('bookbazaar_user');
+  };
+
   useEffect(() => {
     const verifyUser = async () => {
       const token = localStorage.getItem('bookbazaar_token');
@@ -72,6 +78,7 @@ function App() {
       }
     };
     verifyUser();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleLogin = (userData, token) => {
@@ -80,11 +87,7 @@ function App() {
     localStorage.setItem('bookbazaar_user', JSON.stringify(userData));
   };
 
-  const handleLogout = () => {
-    setUser(null);
-    localStorage.removeItem('bookbazaar_token');
-    localStorage.removeItem('bookbazaar_user');
-  };
+
 
   const addToCart = (book) => {
     if (!user) {

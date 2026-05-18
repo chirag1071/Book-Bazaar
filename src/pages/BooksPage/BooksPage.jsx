@@ -27,6 +27,7 @@ function BooksPage({ onAddToCart }) {
         const data = await api.get('/api/book/all');
         setBooks(data.books || []);
       } catch (err) {
+        console.error(err);
         setError("Failed to fetch books");
       } finally {
         setLoading(false);

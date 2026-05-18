@@ -59,6 +59,7 @@ function RegisterPage({ onLogin }) {
         setError(data.message || 'Registration failed. Please try again.');
       }
     } catch (err) {
+      console.error(err);
       setError('Unable to connect to server. Please try again.');
     } finally {
       setLoading(false);

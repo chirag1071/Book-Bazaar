@@ -73,7 +73,7 @@ function AboutPage() {
             <div className="accent-line"></div>
           </div>
           <div className="values-grid">
-            {values.map((v, i) => (
+            {values.map((v) => (
               <div className="value-card" key={v.title}>
                 <span className="value-icon">{v.icon}</span>
                 <h3>{v.title}</h3>

@@ -71,7 +71,7 @@ function CartPage({ cart, updateQuantity, removeFromCart, user }) {
         setSavedTotal(total);
         setOrderPlaced(true);
         // Clear cart items
-        cart.forEach((_, i) => removeFromCart(0));
+        cart.forEach(() => removeFromCart(0));
       } else {
         setError(res?.message || 'Failed to place order. Please try again.');
       }

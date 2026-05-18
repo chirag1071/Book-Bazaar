@@ -33,6 +33,7 @@ function AdminPage({ user }) {
 
   useEffect(() => {
     if (!user || user.role !== 'admin') return;
+    // eslint-disable-next-line
     setLoading(true);
     Promise.all([fetchBooks(), fetchUsers(), fetchOrders()]).finally(() => setLoading(false));
   }, [user]);
@@ -81,6 +82,7 @@ function AdminPage({ user }) {
       setShowForm(false);
       fetchBooks();
     } catch (err) {
+      console.error(err);
       flash('Operation failed. Please try again.');
     }
   };

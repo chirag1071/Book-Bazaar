@@ -55,6 +55,7 @@ export default function AdminDashboard({ user, onLogout }) {
   useEffect(() => {
     if (!user || user.role !== 'admin') return;
     fetchAll();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user]);
 
   /* ── guard ── */
