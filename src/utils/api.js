@@ -1,4 +1,4 @@
-const API_BASE = import.meta.env.VITE_API_BASE || 'http://localhost:5000';
+const API_BASE = import.meta.env.VITE_API_BASE || 'https://book-bazaar-api-f35u.onrender.com';
 
 const api = {
   get: async (endpoint) => {

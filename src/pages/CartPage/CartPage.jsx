@@ -152,7 +152,7 @@ function CartPage({ cart, updateQuantity, removeFromCart, user }) {
                 <div className="cart-item-image">
                   {item.image ? (
                     <img 
-                      src={item.image.startsWith('http') ? item.image : `http://localhost:5000/upload/${item.image}`} 
+                      src={item.image.startsWith('http') ? item.image : `https://book-bazaar-api-f35u.onrender.com/upload/${item.image}`} 
                       alt={item.title} 
                       onError={(e) => { e.target.onerror = null; e.target.src = `https://picsum.photos/seed/${item.id || item._id || 'cart'}/500/750`; }}
                     />

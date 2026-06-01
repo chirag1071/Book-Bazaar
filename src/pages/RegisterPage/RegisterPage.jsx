@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import '../LoginPage/LoginPage.css';
 
-const API_BASE = 'http://localhost:5000';
+const API_BASE = 'https://book-bazaar-api-f35u.onrender.com';
 
 function RegisterPage({ onLogin }) {
   const [name, setName] = useState('');
